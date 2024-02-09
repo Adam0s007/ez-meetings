@@ -1,48 +1,48 @@
-## Projekt aplikacji Doodle
+## Doodle Style Application Project
 
-### Opis projektu:
+### Project Description:
 
-Projekt zakłada stworzenie aplikacji w stylu Doodle, dedykowanej do organizacji wydarzeń i spotkań. 
-Główną funkcjonalnością będzie umożliwienie użytkownikom tworzenia wydarzeń z wieloma opcjami terminowymi. 
-Zaproszeni uczestnicy będą mieli możliwość głosowania na preferowane terminy, co pozwoli ustalić ostateczną i 
-odpowiednią dla wszystkich datę wydarzenia.
+The project involves creating a Doodle-style application dedicated to organizing events and meetings. 
+The main functionality will enable users to create events with multiple date options. 
+Invited participants will have the opportunity to vote on preferred dates, which will help determine the final and 
+suitable date for everyone.
 
-Najważeniejsze feature'y:
-* tworzenie wydarzeń 
-* rejestracja i logowanie użytkowników
-* zapisywanie użytkowników na wydarzenia
-* głosowanie na preferowane terminy
-* wybór ostatecznego terminu wydarzenia
-* zarządzanie wydarzeniami - edycja i usuwanie (tylko dla twórcy wydarzenia)
+Key features include:
+* event creation
+* user registration and login
+* registering users for events
+* voting on preferred dates
+* selecting the final event date
+* event management - editing and deleting (for event creators only)
 
-### Technologie
+### Technologies
 
-* PostgreSQL - baza danych
+* PostgreSQL - database
 * Spring Boot, JPA (Hibernate) - backend
 * React - frontend
 
-### Schemat bazy danych 
+### Database Schema
 
 <img src="assets/db_diagram.png" alt="db_diagram.jpg" height="450px">
 
-### Uruchomienie aplikacji
+### Application Launch
 
-Mając Dockera, aplikację można uruchomić jedną komendą. Wystarczy wejść do folderu projektowego 
-(w miejscu, gdzie znajduje się plik **docker-compose.yaml**) i uruchomić komendę:
+With Docker, the application can be launched with a single command. Simply go to the project folder 
+(where the **docker-compose.yaml** file is located) and run the command:
 
 ```
 docker-compose up -d 
 ```
 
-Domyślnie aplikacja będzie dostępna na następujących portach:
+By default, the application will be available on the following ports:
 
-* Baza danych *PostgreSQL* : 5432
-* Backend *Spring Boot* : 8080
-* Frontend *React* : 3000
+* PostgreSQL database: 5432
+* Spring Boot backend: 8080
+* React frontend: 3000
 
-Aplikacje można uruchomić również częściami w następującej kolejności:
+The application can also be launched in parts in the following order:
 
-1. Baza danych:
+1. Database:
    ```
    docker-compose up -d db
    ```
@@ -57,8 +57,9 @@ Aplikacje można uruchomić również częściami w następującej kolejności:
    docker-compose up -d frontend
    ```
 
-### Testowanie backendu
+### Backend Testing
 
-Importujemy folder *backend* do Intellij: File -> Open.. Czekamy, aż Gradle pobierze wszystkie zależności i 
-zbuduje projekt. Aby przetestować działanie aplikacji korzystamy z test runnera (zielona strzałka obok nazwy klasy testowej).
+Import the *backend* folder into IntelliJ: File -> Open.. Wait until Gradle downloads all dependencies and 
+builds the project. To test the application, use the test runner (green arrow next to the test class name).
+
 
